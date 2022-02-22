@@ -102,7 +102,7 @@
                     <a href="add_stocks_interface.php"> Add Stocks </a>
                 </li>
                 <li>
-                    <a href="#"> Edit Stocks </a>
+                    <a href="edit_stocks_interface.php"> Edit Stocks </a>
                 </li>
                 <li>
                     <a href="#"> Delete Stocks </a>

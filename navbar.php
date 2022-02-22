@@ -99,7 +99,7 @@
                 '<div class="submenu" id="stocks">
             <ul class="submenu-list" data-parent-element="#stocks">
                 <li>
-                    <a href="#"> Add Stocks </a>
+                    <a href="add_stocks_interface.php"> Add Stocks </a>
                 </li>
                 <li>
                     <a href="#"> Edit Stocks </a>

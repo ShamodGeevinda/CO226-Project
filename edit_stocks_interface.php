@@ -140,8 +140,11 @@ if ($_SESSION["type"] != "admin") {
 
 
             </div>
-            <?php include 'footer.php'; ?>
+
+            <?php include 'footer.php'; ?> -->
         </div>
+
+
         <!--  END CONTENT AREA  -->
 
 

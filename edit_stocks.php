@@ -56,7 +56,7 @@ $row_user = mysqli_fetch_assoc($result);
 
                 <div id="content" class="main-content">
                     <br>
-                    <h3 class="card-title">User Details</h3>
+                    <h3 class="card-title">Edit Stock Details</h3>
                     <div class="page-header">
 
                         <?php
@@ -64,7 +64,7 @@ $row_user = mysqli_fetch_assoc($result);
                         if (isset($_POST['new']) && $_POST['new'] == 1) {
                             $PartID = $_REQUEST['PartID'];
                             $update = "UPDATE stock set PartName='" . $_POST['PartName'] . "', ManufactureID='" . $_POST['ManufactureID'] . "', UnitPrice='" . $_POST['UnitPrice'] . "', Quantity='" . $_POST['Quantity'] . "' ,WarrantyDuration='" . $_POST['WarrantyDuration'] .  "' WHERE PartID='" . $_POST['PartID'] . "'";
-                            mysqli_query($mysqli, $update) or die(mysqli_error());
+                            mysqli_query($mysqli, $update) or die(mysqli_error($mysqli));
                             $status = "Record Updated Successfully. </br></br><a href='edit_stocks_interface.php'>View Updated Record</a>";
                             echo '<p style="color:#FF0000;">' . $status . '</p>';
                         } else {
@@ -130,6 +130,9 @@ $row_user = mysqli_fetch_assoc($result);
 
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
                 <?php include 'footer.php'; ?>
             </div>
             <!--  END CONTENT AREA  -->

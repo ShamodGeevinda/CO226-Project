@@ -1,10 +1,4 @@
-<!-- php include './sessionstart.php';
-if ($_SESSION["type"] != "admin") {
-    header("location: home.php");
-    exit;
-}
-?> -->
-<!-- session start and requiring session type removed -->
+<!-- ?php include './sessionstart.php'; ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +41,7 @@ if ($_SESSION["type"] != "admin") {
                     <nav class="breadcrumb-one" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Stocks</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Edit Stocks</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Delete Stocks</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -55,14 +49,14 @@ if ($_SESSION["type"] != "admin") {
                 <div class="page-header">
                     <nav class="breadcrumb-one" aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <h3>Edit Your Stocks</h3>
+                            <h3>Delete Stock Records</h3>
                         </ol>
                     </nav>
                 </div>
 
                 <div class="table-responsive">
-                    <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
 
+                    <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
                         <thead>
                             <tr>
 
@@ -79,25 +73,20 @@ if ($_SESSION["type"] != "admin") {
                         </thead>
                         <tbody>
                             <?php
-                            // $servername = "localhost";
-                            // $username = "root";
-                            // $password = "1234";
-                            // $dbname = "comshop";
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "1234";
+                            $dbname = "comshop";
 
-
-                            // // Create connection
-                            // $conn = new mysqli($servername, $username, $password, $dbname);
-                            // // Check connection
-                            // if ($conn->connect_error) {
-                            //     die("Connection failed: " . $conn->connect_error);
-                            // }
+                            // Create connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            // Check connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
                             $count = 1;
-                            // $sql = "SELECT * FROM employee;";
-                            // $result = mysqli_query($conn, $sql);
-
-                            require_once 'config.php';
-                            $sql = "SELECT * FROM stock";
-                            $result = $mysqli->query($sql);
+                            $sql = "SELECT * FROM stock;";
+                            $result = mysqli_query($conn, $sql);
                             //$result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -114,9 +103,11 @@ if ($_SESSION["type"] != "admin") {
                                         <td><?php echo $row["UnitPrice"]; ?></td>
                                         <td><?php echo $row["Quantity"]; ?></td>
                                         <td><?php echo $row["WarrantyDuration"]; ?></td>
-                                        <td class="text-center"><a href="edit_stocks.php?ID=<?php echo $row["PartID"]; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-6 mb-1">
-                                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                                </svg></a></td>
+
+                                        <td class="text-center"><a href="delete_stocks.php?id=<?php echo $row["PartID"]; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-6 mb-1">
+                                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                </svg></a></td>>
 
 
 
@@ -127,7 +118,7 @@ if ($_SESSION["type"] != "admin") {
                             } else {
                                 echo "<h4>No Record to View</h3>";
                             }
-                            // $conn->close();
+                            $conn->close();
                             ?>
 
 
@@ -137,14 +128,9 @@ if ($_SESSION["type"] != "admin") {
                     </table>
                 </div>
 
-
-
+                <?php include 'footer.php'; ?>
             </div>
-
-            <?php include 'footer.php'; ?> -->
         </div>
-
-
         <!--  END CONTENT AREA  -->
 
 
@@ -170,7 +156,8 @@ if ($_SESSION["type"] != "admin") {
     <script src="assets/js/dashboard/dash_1.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+
+
     <script src="plugins/table/datatable/datatables.js"></script>
     <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
     <!-- <script src="plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
@@ -216,7 +203,6 @@ if ($_SESSION["type"] != "admin") {
             "pageLength": 10
         });
     </script>
-
 
 </body>
 

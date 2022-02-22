@@ -105,7 +105,7 @@
                     <a href="edit_stocks_interface.php"> Edit Stocks </a>
                 </li>
                 <li>
-                    <a href="#"> Delete Stocks </a>
+                    <a href="delete_stocks_interface.php"> Delete Stocks </a>
                 </li>
             </ul>
         </div>';

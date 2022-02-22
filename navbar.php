@@ -99,13 +99,13 @@
                 '<div class="submenu" id="stocks">
             <ul class="submenu-list" data-parent-element="#stocks">
                 <li>
-                    <a href="#"> Add Stocks </a>
+                    <a href="add_stocks_interface.php"> Add Stocks </a>
                 </li>
                 <li>
-                    <a href="#"> Edit Stocks </a>
+                    <a href="edit_stocks_interface.php"> Edit Stocks </a>
                 </li>
                 <li>
-                    <a href="#"> Delete Stocks </a>
+                    <a href="delete_stocks_interface.php"> Delete Stocks </a>
                 </li>
             </ul>
         </div>';

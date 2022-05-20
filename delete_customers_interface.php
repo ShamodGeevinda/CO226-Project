@@ -31,7 +31,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        <?php include 'navbar.php'; ?>
+        <?php include 'navbar_customers.php'; ?>
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->

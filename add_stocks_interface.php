@@ -51,7 +51,7 @@
                                             <div class='d-flex align-items-center'>
                                             <i class='bx bx-like'></i>
                                             <span>
-                                            User Details successfully added to the database.
+                                            Stock Details successfully added to the database.
                                             </span>
                                             </div>
                                         </div>";
@@ -216,6 +216,9 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+
+
+    <!-- Search print button sort -->
     <script src="plugins/table/datatable/datatables.js"></script>
     <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
     <script src="plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>

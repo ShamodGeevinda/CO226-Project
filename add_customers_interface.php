@@ -8,14 +8,14 @@
 
 <!-- show password -->
 <script>
-	function myFunction() {
-		var x = document.getElementById("myInput");
-			if (x.type === "password") {
-				x.type = "text";
-			} else {
-				x.type = "password";
-			}
-	}
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
 </script>
 
 
@@ -115,15 +115,15 @@
                         <div class="col-md-6 mb-6">
                             <label for="validationDefault02">Password</label>
                             <input type="password" class="form-control" id="myInput" placeholder="Password" name="Password" required>
-							<input type="checkbox" onclick="myFunction()">Show Password
+                            <input type="checkbox" onclick="myFunction()">Show Password
                         </div>
-						
+
                     </div>
                     <br>
                     <div class="form-row">
                         <div class="col-md-4 mb-4">
                             <label for="validationDefault01">Contact Number</label>
-                            <input type="text" class="form-control" id="validationDefault01" placeholder="Contact Number" name="ContactNumber" required>
+                            <input type="text" class="form-control" id="validationDefault01" placeholder="Contact Number" name="ContactNum" required>
                         </div>
                         <div class="col-md-4 mb-4">
                             <label for="validationDefault02">Address</label>
@@ -162,7 +162,7 @@
                                 <th>Contact Number</th>
                                 <th>Address</th>
                                 <th>NIC</th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>

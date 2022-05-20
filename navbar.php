@@ -153,13 +153,13 @@
         <div class="submenu" id="customers">
             <ul class="submenu-list" data-parent-element="#customers">
                 <li>
-                    <a href="#"> Add Customers </a>
+                    <a href="add_customers_interface.php"> Add Customers </a>
                 </li>
                 <li>
-                    <a href="#"> Edit Customers </a>
+                    <a href="edit_customers_interface.php"> Edit Customers </a>
                 </li>
                 <li>
-                    <a href="#"> Delete Customers </a>
+                    <a href="delete_customers_interface.php"> Delete Customers </a>
                 </li>
                 <li>
                     <a href="#"> Ongoing Repairs </a>

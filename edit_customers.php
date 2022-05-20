@@ -65,7 +65,7 @@ $row_user = mysqli_fetch_assoc($result);
                             $PartID = $_REQUEST['CustomerID'];
                             $update = "UPDATE Customer set UserName='" . $_POST['UserName'] . "', Password='" . $_POST['Password'] . "', ContactNum='" . $_POST['ContactNum'] . "', Address='" . $_POST['Address'] . "' ,NIC='" . $_POST['NIC'] .  "' WHERE CustomerID='" . $_POST['CustomerID'] . "'";
                             mysqli_query($mysqli, $update) or die(mysqli_error($mysqli));
-                            $status = "Record Updated Successfully. </br></br><a href='edit_stocks_interface.php'>View Updated Record</a>";
+                            $status = "Record Updated Successfully. </br></br><a href='edit_customers_interface.php'>View Updated Record</a>";
                             echo '<p style="color:#FF0000;">' . $status . '</p>';
                         } else {
                         ?>

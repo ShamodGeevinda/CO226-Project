@@ -162,7 +162,7 @@
                     <a href="delete_customers_interface.php"> Delete Customers </a>
                 </li>
                 <li>
-                    <a href="#"> Ongoing Repairs </a>
+                    <a href="customer_repair_status.php"> Repair Status </a>
                 </li>
 
             </ul>

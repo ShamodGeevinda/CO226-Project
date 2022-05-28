@@ -177,7 +177,7 @@
                     <a href="update_repairs_interface.php"> Update Repairs </a>
                 </li>
                 <li>
-                    <a href="#"> Add Orders </a>
+                    <a href="add_order_interface.php"> Add Orders </a>
                 </li>
 
             </ul>

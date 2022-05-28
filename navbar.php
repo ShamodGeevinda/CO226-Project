@@ -171,13 +171,13 @@
         <div class="submenu" id="services">
             <ul class="submenu-list" data-parent-element="#services">
                 <li>
-                    <a href="#"> Add Repairs </a>
+                    <a href="add_repairs_interface.php"> Add Repairs </a>
                 </li>
                 <li>
-                    <a href="#"> Update Repairs </a>
+                    <a href="update_repairs_interface.php"> Update Repairs </a>
                 </li>
                 <li>
-                    <a href="#"> Add Orders </a>
+                    <a href="add_order_interface.php"> Add Orders </a>
                 </li>
 
             </ul>
